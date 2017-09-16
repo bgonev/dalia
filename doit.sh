@@ -241,7 +241,7 @@ cp_pup "./to_aws/files/*" "~/tmp/to_aws/files/"
 cp_pup "/tmp/aws_objects.log" "~/tmp/to_aws/files/"
 exe_pup "sudo hostnamectl set-hostname puppet.domain.com"
 exe_pup "sudo yum -y install git"
-exe_pup "git clone https://github.com/bgonev/aws_task.git ~/tmp/from_git"
+exe_pup "git clone https://github.com/bgonev/dalia.git ~/tmp/from_git"
 
 ## Temporary enable root trough ssh
 

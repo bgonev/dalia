@@ -257,15 +257,15 @@ echo "Configuring Slave for SQL server part..."
 exe_s2 "sudo /opt/puppetlabs/bin/puppet agent --test"
 sleep 120
 ### execute replication configuration
-exe_s1 "/tmp/master.sh"
-sleep 30
-exe_s2 "/tmp/slave.sh"
-sleep 120
+#exe_s1 "/tmp/master.sh"
+#sleep 30
+#exe_s2 "/tmp/slave.sh"
+#sleep 120
 echo "Configuring Node1 for Web server part..."
 exe_w1 "sudo /opt/puppetlabs/bin/puppet agent --test"
 sleep 120
 echo "Configuring Node2 for Web server part..."
 exe_w2 "sudo /opt/puppetlabs/bin/puppet agent --test"
-exe_w1 "/tmp/insert.sh"
+#exe_w1 "/tmp/insert.sh"
 echo "*****End.******"
 
