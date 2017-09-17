@@ -23,6 +23,8 @@ rvm install "ruby-2.2.1"
 gem install bundler
 gem install pg 
 rvm --default use 2.2.1
-bundle
-RAILS_ENV=production bundle exec rake bootstrap
-bundle exec  rails server -e production -p 80 -b 0.0.0.0
+cp -r /tmp/database.yml /webshare/www.domain.com/ruby-rails-sample/config/
+cd /webshare/www.domain.com/ruby-rails-sample
+/home/centos/.rvm/gems/ruby-2.2.2/bin/bundle
+RAILS_ENV=production /home/centos/.rvm/gems/ruby-2.2.2/bin/bundle exec rake bootstrap
+/home/centos/.rvm/gems/ruby-2.2.2/bin/bundle exec  rails server -e production -p 5000 -b 0.0.0.0 &
