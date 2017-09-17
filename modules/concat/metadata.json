@@ -1,21 +1,20 @@
 {
-  "name": "puppetlabs-stdlib",
-  "version": "4.20.0",
-  "author": "puppetlabs",
-  "summary": "Standard library of resources for Puppet modules.",
+  "name": "puppetlabs-concat",
+  "version": "4.0.1",
+  "author": "Puppet Labs",
+  "summary": "Construct files from multiple fragments.",
   "license": "Apache-2.0",
-  "source": "https://github.com/puppetlabs/puppetlabs-stdlib",
-  "project_page": "https://github.com/puppetlabs/puppetlabs-stdlib",
+  "source": "https://github.com/puppetlabs/puppetlabs-concat",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-concat",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
   "dependencies": [
-  
+    {"name":"puppetlabs/stdlib","version_requirement":">= 4.13.1 < 5.0.0"}
   ],
   "data_provider": null,
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -24,7 +23,6 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -33,7 +31,6 @@
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -42,7 +39,6 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -59,6 +55,7 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
+        "6",
         "7",
         "8"
       ]
@@ -66,6 +63,8 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
+        "10.04",
+        "12.04",
         "14.04",
         "16.04"
       ]
@@ -80,14 +79,10 @@
     {
       "operatingsystem": "Windows",
       "operatingsystemrelease": [
-        "Server 2003",
         "Server 2003 R2",
-        "Server 2008",
         "Server 2008 R2",
         "Server 2012",
-        "Server 2012 R2",
-        "7",
-        "8"
+        "Server 2012 R2"
       ]
     },
     {
@@ -97,13 +92,18 @@
         "6.1",
         "7.1"
       ]
+    },
+    {
+      "operatingsystem": "OSX",
+      "operatingsystemrelease": [
+        "10.9"
+      ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=2.7.20 < 6.0.0"
+      "version_requirement": ">= 4.7.0 < 5.0.0"
     }
-  ],
-  "description": "Standard Library for Puppet Modules"
+  ]
 }
