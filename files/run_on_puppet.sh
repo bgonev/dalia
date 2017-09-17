@@ -264,8 +264,9 @@ sleep 120
 echo "Configuring Node1 for Web server part..."
 exe_w1 "sudo /opt/puppetlabs/bin/puppet agent --test"
 sleep 120
+exe_w1 "/tmp/rails.sh"
 echo "Configuring Node2 for Web server part..."
 exe_w2 "sudo /opt/puppetlabs/bin/puppet agent --test"
-#exe_w1 "/tmp/insert.sh"
+exe_w2 "/tmp/rails.sh"
 echo "*****End.******"
 
