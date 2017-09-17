@@ -1,4 +1,8 @@
 #!/bin/bash
+sudo chmod -R ugoa+rwx /webshare
+cd /webshare/www.domain.com
+git clone https://github.com/heroku/ruby-rails-sample.git
+cd ruby-rails-sample/
 sudo yum -y install curl
 sudo yum -y install postgresql-devel
 sudo curl -sSL https://rvm.io/mpapis.asc | gpg --import -
@@ -18,4 +22,6 @@ sudo yum -y install git
 rvm install "ruby-2.2.1"
 gem install bundler
 gem install pg 
-
+rvm --default use 2.2.1
+bundle
+bundle exec  rails server -e production -p 5000 -b 0.0.0.0

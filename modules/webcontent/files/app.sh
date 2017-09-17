@@ -1,5 +1,5 @@
 #!/bin/sh
-cd
+cd 
 git clone https://github.com/heroku/ruby-rails-sample.git
 cd ruby-rails-sample/
 bundle
