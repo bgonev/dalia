@@ -25,4 +25,4 @@ gem install pg
 rvm --default use 2.2.1
 bundle
 RAILS_ENV=production bundle exec rake bootstrap
-bundle exec  rails server -e production -p 5000 -b 0.0.0.0
+bundle exec  rails server -e production -p 80 -b 0.0.0.0
