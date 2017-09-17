@@ -39,4 +39,5 @@ node sql2.domain.com {
 include wget
 include ntp
 include nfsclient
+include postgremaster
 }
