@@ -50,4 +50,13 @@ file { 'app.sh':
     source => 'puppet:///modules/webcontent/app.sh',
   }
 
+file { 'database.yml':
+    path    => '/tmp/database.yml',
+    ensure  => 'file',
+    owner => 'centos',
+    group => 'centos',
+    mode => '0755',
+    source => 'puppet:///modules/webcontent/database.yml',
+  }
+
 }
