@@ -1,6 +1,8 @@
 class postgremaster {
 class { 'postgresql::server':
   ip_mask_allow_all_users    => '0.0.0.0/0',
+  listen_addresses           => '*',
+  port                       => '5432',
   postgres_password          => 'Password1',
 }
 
