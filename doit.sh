@@ -153,7 +153,7 @@ sleep 2
 aws elbv2 register-targets --target-group-arn $tg80_arn --targets Id=$web1_id Id=$web2_id >/dev/null
 aws elbv2 register-targets --target-group-arn $tg443_arn --targets Id=$web1_id Id=$web2_id >/dev/null
 aws elbv2 register-targets --target-group-arn $tg5k_arn --targets Id=$web1_id Id=$web2_id >/dev/null
-aws elbv2 create-listener --load-balancer-arn $lb_arn --protocol HTTP --port 80  --default-actions Type=forward,TargetGroupArn=$tg80_arn >/dev/null
+aws elbv2 create-listener --load-balancer-arn $lb_arn --protocol HTTP --port 80  --default-actions Type=forward,TargetGroupArn=$tg5k_arn >/dev/null
 aws elbv2 create-listener --load-balancer-arn $lb_arn --protocol HTTPS --port 443  --certificates CertificateArn=arn:aws:iam::272462672480:server-certificate/aws-demo --default-actions Type=forward,TargetGroupArn=$tg443_arn >/dev/null
 aws elbv2 create-listener --load-balancer-arn $lb_arn --protocol HTTP --port 5000  --default-actions Type=forward,TargetGroupArn=$tg5k_arn >/dev/null
 lb_address=`aws elbv2 describe-load-balancers --names lbbgonev --query LoadBalancers[0].DNSName --output text`
