@@ -1,6 +1,7 @@
 #!/bin/bash
 sudo chmod -R ugoa+rwx /webshare
 cd /webshare/www.domain.com
+sudo yum -y install git
 git clone https://github.com/heroku/ruby-rails-sample.git
 cd ruby-rails-sample/
 sudo yum -y install curl
@@ -18,7 +19,6 @@ sudo wget -q https://toolbelt.heroku.com/install.sh
 sudo chmod 755 install.sh
 sudo ./install.sh
 ./install.sh
-sudo yum -y install git
 rvm install "ruby-2.2.1"
 gem install bundler
 gem install pg 
